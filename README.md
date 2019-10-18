@@ -39,7 +39,7 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
     
   - **2. Use It**
   
-    Create a ListView, and in its children use SlimyCard():
+    Create a ListView, and in its children use SlimyCard()
     
     ```
     ListView(
@@ -48,3 +48,26 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
       ],
     );
     ```
+    
+  - **3. Custimize It**
+    
+    You can customize SlimyCard as per need, by using the following parameters:
+    
+    ```
+    ListView(
+      children: <Widget>[
+        SlimyCard(
+          color: Colors.red,
+          width: 200,
+          topCardHeight: 400,
+          bottomCardHeight: 200,
+          borderRadius: 15,
+          topCardWidget: myWidget01(),
+          bottomCardWidget: myWidget02(),
+        ),
+      ],
+    );
+    ```
+    **myWidget01** & **myWidget02** are your custom widget which you can display in Top Card & Bottom Card respectively.
+    
+    
