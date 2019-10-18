@@ -8,7 +8,7 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
 
   - **1. Depend on it**
 
-    Add this to your package's pubspec.yaml file:
+    Add this to your flutter app's pubspec.yaml file:
     
     ```
     dependencies:
