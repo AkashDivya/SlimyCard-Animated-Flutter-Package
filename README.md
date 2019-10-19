@@ -2,7 +2,7 @@
 
 SlimyCard provides a beautiful slime-like animation of a Card that separates into two different Cards, one at the top and the another at bottom. It is possible to put any custom widget in these two separate cards.
 
-![Banner Image](https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project/blob/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya.png)
+![Banner Image](https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Project/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya.png?token=ALFS7A4EMA4K2KGKOOC76OC5VNNGQ)
 
 # How to install this package
 
@@ -74,7 +74,7 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
     
 # Actual ScreenShots
 
-  <img src="https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project/blob/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(1).gif" width="250" height="444.44" /><img width="25"><img src="https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project/blob/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(2).gif" width="250" height="444.44" /><img width="25"><img src="https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project/blob/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(3).gif" width="250" height="444.44" />
+  <img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Project/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(1).gif?token=ALFS7A52NCA6OYJFKWVTSDK5VNNMC" width="250" height="444.44" /><img width="25"><img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Project/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(2).gif?token=ALFS7A33PYTF5TA3W2VCGKK5VNNPC" width="250" height="444.44" /><img width="25"><img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Project/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(3).gif?token=ALFS7AZ7WVX6JUKWIMEKMDS5VNNQI" width="250" height="444.44" />
 
 # How to get the status of this package
 
@@ -124,6 +124,8 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
   Cooming Soon...
 
 # About Me
+
+Hi! my name is Akash Divya.
 
 I'm a veteran Designer/Animator with **10+ years** of experience. I always hated the excuses Developers gave me when they fail to implement my Design. One day, when I found about Flutter I said no more & started learning it.
 
