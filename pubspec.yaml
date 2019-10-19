@@ -1,9 +1,8 @@
 name: slimy_card
-description: SlimyCard provides a beautiful slime-like animation of a Card that separates into two different Cards, one at the top and the another at bottom. It is possible to put any custom widget in these two separate cards, topCardWidget & bottomCardWidget.
+description: It provides a beautiful slime-like animation of a Card that separates into two.
 version: 1.0.0
 author: Akash Divya <akash.apd@gmail.com>
-homepage: http://facebook.com/BadassDeveloperDesignerClub/
-repository: https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project
+homepage: https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
