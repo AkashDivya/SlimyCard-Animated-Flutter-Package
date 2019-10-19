@@ -71,6 +71,10 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
     ```
     
     **myWidget01** & **myWidget02** are your custom widget which you can display in Top Card & Bottom Card respectively.
+    
+# Actual ScreenShots
+
+  <img src="https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project/blob/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(1).gif" width="250" height="444.44" /><img width="25"><img src="https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project/blob/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(2).gif" width="250" height="444.44" /><img width="25"><img src="https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project/blob/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(3).gif" width="250" height="444.44" />
 
 # How to get the status of this package
 
