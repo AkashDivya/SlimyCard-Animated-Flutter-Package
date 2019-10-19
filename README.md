@@ -100,6 +100,20 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
   ```
   
   snapshot.data will contain the **real-time**
+  
+# State change in the Package
+
+  SlimeyCard also supports changing of state, check the code below:
+  
+  ```
+  SlimyCard(
+    topCardWidget: topCardWidget((snapshot.data)
+        ? 'assets/images/rock_aggresive.jpg'
+        : 'assets/images/rock_calm.jpg'),
+  ),
+  ```
+  
+  In the code above, **snapshot.data** contains status of **SlimeyCard** and have two states according to it & hence updates UI according to it.
 
 # App Demonstration Video
 
