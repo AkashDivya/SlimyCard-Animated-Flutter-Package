@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:slimy_card/slimy_card.dart';
 
 void main() {
+  //Don't worry about these codes here, as they are not relevant for this example.
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.dark,
@@ -10,7 +11,6 @@ void main() {
     systemNavigationBarIconBrightness: Brightness.dark,
     systemNavigationBarDividerColor: Colors.transparent,
   ));
-
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(MyApp());
@@ -36,6 +36,35 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: StreamBuilder(
+        // This streamBuilder reads the real-time status of SlimyCard.
+        initialData: false,
+        stream: slimyCard.stream, //Stream of SlimyCard
+        builder: ((BuildContext context, AsyncSnapshot snapshot) {
+          return ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              SizedBox(height: 100),
+
+              // SlimyCard is being called here.
+              SlimyCard(
+                // In topCardWidget below, imagePath changes according to the
+                // status of the SlimyCard(snapshot.data).
+                topCardWidget: topCardWidget((snapshot.data)
+                    ? 'assets/images/rock_aggresive.jpg'
+                    : 'assets/images/rock_calm.jpg'),
+                bottomCardWidget: bottomCardWidget(),
+              ),
+            ],
+          );
+        }),
+      ),
+    );
+  }
+
   // This widget will be passed as Top Card's Widget.
   Widget topCardWidget(String imagePath) {
     return Column(
@@ -85,35 +114,6 @@ class _HomePageState extends State<HomePage> {
         fontWeight: FontWeight.w500,
       ),
       textAlign: TextAlign.center,
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: StreamBuilder(
-        // This streamBuilder reads the real-time status of SlimyCard.
-        initialData: false,
-        stream: slimyCard.stream, //Stream of SlimyCard
-        builder: ((BuildContext context, AsyncSnapshot snapshot) {
-          return ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              SizedBox(height: 100),
-
-              // SlimyCard is being called here.
-              SlimyCard(
-                // In topCardWidget below, imagePath changes according to the
-                // status of the SlimyCard(snapshot.data).
-                topCardWidget: topCardWidget((snapshot.data)
-                    ? 'assets/images/rock_aggresive.jpg'
-                    : 'assets/images/rock_calm.jpg'),
-                bottomCardWidget: bottomCardWidget(),
-              ),
-            ],
-          );
-        }),
-      ),
     );
   }
 }
