@@ -1,3 +1,7 @@
+## [1.0.2] - Oct 21, 2019
+
+* Fixed errors in readme.md. 
+
 ## [1.0.1] - Oct 20, 2019
 
 * Fixed short description and other small issues. 
