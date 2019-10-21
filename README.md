@@ -2,7 +2,7 @@
 
 SlimyCard provides a beautiful slime-like animation of a Card that separates into two different Cards, one at the top and the another at bottom. It is possible to put any custom widget in these two separate cards.
 
-![Banner Image](https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Project/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya.png)
+![Banner Image](https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Package/master/images/SlimyCard-Animated-Flutter-Package-by-Akash-Divya.png)
 
 # How to install this package
 
@@ -74,7 +74,7 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
     
 # Actual ScreenShots
 
-  <img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Project/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(1).gif" width="250" height="444.44" /><img width="25"><img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Project/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(2).gif" width="250" height="444.44" /><img width="25"><img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Project/master/images/SlimyCard-Animated-Flutter-Project-by-Akash-Divya%20(3).gif" width="250" height="444.44" />
+  <img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Package/master/images/SlimyCard-Animated-Flutter-Package-by-Akash-Divya%20(1).gif" width="250" height="444.44" /><img width="25"><img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Package/master/images/SlimyCard-Animated-Flutter-Package-by-Akash-Divya%20(2).gif" width="250" height="444.44" /><img width="25"><img src="https://raw.githubusercontent.com/AkashDivya/SlimyCard-Animated-Flutter-Package/master/images/SlimyCard-Animated-Flutter-Package-by-Akash-Divya%20(3).gif" width="250" height="444.44" />
 
 # How to get the status of this package
 
