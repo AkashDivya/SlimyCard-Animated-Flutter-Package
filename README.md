@@ -64,7 +64,7 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
           borderRadius: 15,
           topCardWidget: myWidget01(),
           bottomCardWidget: myWidget02(),
-          slimeEnabled = true,
+          slimeEnabled: true,
         ),
       ],
     ),
@@ -95,7 +95,7 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
             borderRadius: 15,
             topCardWidget: myWidget01(),
             bottomCardWidget: myWidget02(),
-            slimeEnabled = true,
+            slimeEnabled: true,
           ),
         ],
       );
