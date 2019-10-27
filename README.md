@@ -49,7 +49,7 @@ SlimyCard provides a beautiful slime-like animation of a Card that separates int
     );
     ```
     
-  - **3. Custimize It**
+  - **3. Customize It**
     
     You can customize SlimyCard as per need, by using the following parameters:
     
