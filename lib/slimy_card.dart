@@ -257,7 +257,7 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
                   width: 50,
                   child: RotationTransition(
                     turns: arrowAnimation,
-                    child: Icon(Icons.keyboard_arrow_down),
+                    child: Icon(Icons.keyboard_arrow_down,color: Colors.black),
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
