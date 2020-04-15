@@ -1,3 +1,7 @@
+## [1.0.4] - Apr 15, 2020
+
+* Updated the arrow color changing when using dark theme.
+
 ## [1.0.3] - Apr 15, 2020
 
 * Checked & updated the package according to the new version of flare_flutter(2.0.3).
