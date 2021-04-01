@@ -31,8 +31,8 @@ class SlimyCard extends StatefulWidget {
   final double topCardHeight;
   final double bottomCardHeight;
   final double borderRadius;
-  final Widget topCardWidget;
-  final Widget bottomCardWidget;
+  final Widget? topCardWidget;
+  final Widget? bottomCardWidget;
   final bool slimeEnabled;
 
   SlimyCard({
@@ -56,22 +56,22 @@ class SlimyCard extends StatefulWidget {
 }
 
 class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
-  bool isSeperated;
+  static const double initialBottomDimension = 100;
+  late bool isSeperated;
+  late double bottomDimension;
+  late double finalBottomDimension;
+  late double gap;
+  late double gapInitial;
+  late double gapFinal;
+  late double x;
+  late double y;
 
-  double bottomDimension;
-  double initialBottomDimension;
-  double finalBottomDimension;
-  double gap;
-  double gapInitial;
-  double gapFinal;
-  double x;
-  double y;
-  String activeAnimation;
-  Widget topCardWidget;
-  Widget bottomCardWidget;
+  late String activeAnimation;
+  late Widget topCardWidget;
+  late Widget bottomCardWidget;
 
-  Animation<double> arrowAnimation;
-  AnimationController arrowAnimController;
+  late Animation<double> arrowAnimation;
+  late AnimationController arrowAnimController;
 
   /// `action` is the main function that triggers the process of separation of
   /// the cards and vice-versa.
@@ -99,17 +99,18 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
+
     isSeperated = false;
     activeAnimation = 'Idle';
-    initialBottomDimension = 100;
     finalBottomDimension = widget.bottomCardHeight;
     bottomDimension = initialBottomDimension;
-    topCardWidget = (widget.topCardWidget != null)
-        ? widget.topCardWidget
-        : simpleTextWidget('This is Top Card Widget.');
-    bottomCardWidget = (widget.bottomCardWidget != null)
-        ? widget.bottomCardWidget
-        : simpleTextWidget('This is Bottom Card Widget.');
+
+    topCardWidget =
+        widget.topCardWidget ?? simpleTextWidget('This is Top Card Widget.');
+
+    bottomCardWidget = widget.bottomCardWidget ??
+        simpleTextWidget('This is Bottom Card Widget.');
+
     arrowAnimController = AnimationController(
       vsync: this,
       duration: Duration(milliseconds: 200),
@@ -123,12 +124,15 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
     super.didChangeDependencies();
     x = (widget.borderRadius < 10) ? 10 : widget.borderRadius;
     y = (widget.borderRadius < 2) ? 2 : widget.borderRadius;
+
     gapInitial = ((widget.topCardHeight - x - widget.width / 4) > 0)
         ? (widget.topCardHeight - x - widget.width / 4)
         : 0;
+
     gapFinal = ((widget.topCardHeight + x - widget.width / 4 + 50) > 0)
         ? (widget.topCardHeight + x - widget.width / 4 + 50)
         : 2 * x + 50;
+
     gap = gapInitial;
   }
 
@@ -139,7 +143,7 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
     super.didUpdateWidget(oldWidget);
     setState(() {
       if (widget.topCardWidget != null) {
-        topCardWidget = widget.topCardWidget;
+        topCardWidget = widget.topCardWidget!;
       } else {}
     });
   }
@@ -305,6 +309,6 @@ class StatusBloc {
   Stream<bool> get stream => statusController.stream;
 
   dispose() {
-    statusController?.close();
+    statusController.close();
   }
 }
