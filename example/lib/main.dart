@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:slimy_card/slimy_card.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   //Don't worry about these codes here, as they are not relevant for this example.
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
