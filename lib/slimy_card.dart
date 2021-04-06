@@ -41,8 +41,8 @@ class SlimyCard extends StatefulWidget {
     this.topCardHeight = 300,
     this.bottomCardHeight = 150,
     this.borderRadius = 25,
-    this.topCardWidget,
-    this.bottomCardWidget,
+    required this.topCardWidget,
+    required this.bottomCardWidget,
     this.slimeEnabled = true,
   })  : assert(topCardHeight >= 150, 'Height of Top Card must be atleast 150.'),
         assert(bottomCardHeight >= 100,
@@ -56,22 +56,20 @@ class SlimyCard extends StatefulWidget {
 }
 
 class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
-  bool isSeperated;
+  late bool isSeparated;
 
-  double bottomDimension;
-  double initialBottomDimension;
-  double finalBottomDimension;
-  double gap;
-  double gapInitial;
-  double gapFinal;
-  double x;
-  double y;
-  String activeAnimation;
-  Widget topCardWidget;
-  Widget bottomCardWidget;
+  late double bottomDimension;
+  late double initialBottomDimension;
+  late double finalBottomDimension;
+  late double gap;
+  late double gapInitial;
+  late double gapFinal;
+  late double x;
+  late double y;
+  late String activeAnimation;
 
-  Animation<double> arrowAnimation;
-  AnimationController arrowAnimController;
+  late Animation<double> arrowAnimation;
+  late AnimationController arrowAnimController;
 
   /// `action` is the main function that triggers the process of separation of
   /// the cards and vice-versa.
@@ -79,14 +77,14 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
   /// It also updates the status of the SlimyCard.
 
   void action() {
-    if (isSeperated) {
-      isSeperated = false;
+    if (isSeparated) {
+      isSeparated = false;
       slimyCard.updateStatus(false);
       arrowAnimController.reverse();
       gap = gapInitial;
       bottomDimension = initialBottomDimension;
     } else {
-      isSeperated = true;
+      isSeparated = true;
       slimyCard.updateStatus(true);
       arrowAnimController.forward();
       gap = gapFinal;
@@ -99,17 +97,11 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    isSeperated = false;
+    isSeparated = false;
     activeAnimation = 'Idle';
     initialBottomDimension = 100;
     finalBottomDimension = widget.bottomCardHeight;
     bottomDimension = initialBottomDimension;
-    topCardWidget = (widget.topCardWidget != null)
-        ? widget.topCardWidget
-        : simpleTextWidget('This is Top Card Widget.');
-    bottomCardWidget = (widget.bottomCardWidget != null)
-        ? widget.bottomCardWidget
-        : simpleTextWidget('This is Bottom Card Widget.');
     arrowAnimController = AnimationController(
       vsync: this,
       duration: Duration(milliseconds: 200),
@@ -130,18 +122,6 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
         ? (widget.topCardHeight + x - widget.width / 4 + 50)
         : 2 * x + 50;
     gap = gapInitial;
-  }
-
-  /// It supports multiple states and updates app according to them.
-
-  @override
-  void didUpdateWidget(SlimyCard oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    setState(() {
-      if (widget.topCardWidget != null) {
-        topCardWidget = widget.topCardWidget;
-      } else {}
-    });
   }
 
   @override
@@ -178,8 +158,8 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
                       padding: EdgeInsets.all(10),
                       child: AnimatedOpacity(
                         duration: Duration(milliseconds: 100),
-                        opacity: (isSeperated) ? 1.0 : 0,
-                        child: bottomCardWidget,
+                        opacity: (isSeparated) ? 1.0 : 0,
+                        child: widget.bottomCardWidget,
                       ),
                     ),
                     Column(
@@ -219,7 +199,7 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
                   ),
                   alignment: Alignment.center,
                   padding: EdgeInsets.all(10),
-                  child: topCardWidget,
+                  child: widget.topCardWidget,
                 ),
                 Column(
                   children: <Widget>[
@@ -305,6 +285,6 @@ class StatusBloc {
   Stream<bool> get stream => statusController.stream;
 
   dispose() {
-    statusController?.close();
+    statusController.close();
   }
 }
